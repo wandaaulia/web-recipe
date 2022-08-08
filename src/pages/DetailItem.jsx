@@ -25,9 +25,9 @@ const DetailItem = () => {
       <AppBar />
   <div className='flex-1 mb-0'>
             {error ? (
-        <>Oh no, there was an error</>
+        <div className="mx-3">Oh no, there was an error</div>
       ) : isLoading ? (
-        <>Loading...</>
+        <div className="ml-8">Loading...</div>
       ) : data ? 
       
         
@@ -55,7 +55,7 @@ const DetailItem = () => {
                  <ButtonBar item={item.strYoutube} idMeal={item.idMeal} strMealThumb={item.strMealThumb} strMeal={item.strMeal}/>
                 </div>
 
-            <div className='z-10000 border-t border-solid border-gray-200 flex fixed bottom-0 justify-center py-2  h-14  inset-x-0 mb-0 px-4  bg-white md:hidden flex-row'> 
+            <div className='z-10000 border-t border-solid border-gray-200 flex fixed bottom-0 justify-center py-2  h-16  inset-x-0 mb-0 px-4  bg-white md:hidden flex-row'> 
                  <ButtonBar item={item.strYoutube} idMeal={item.idMeal} strMealThumb={item.strMealThumb} strMeal={item.strMeal} />
                 </div>
 

@@ -21,7 +21,7 @@ const ContainerList = (props) => {
   return (
     <div className='w-full md:w-11/12 mx-auto my-6 '>
     {/* <h1 className='font-semibold text-xl pb-6 xl:text-2xl text-red-500 pl-4 2xl:text-3xl'> {props.title} </h1> */}
-     <h3 className='mb-4 text-xl font-semibold black-title-detail md:w-11/12 md:mx-0 mx-3 xl:text-3xl 2xl:text-4xl'> {props.title}  </h3> 
+     <h3 className='mb-4 text-xl font-semibold black-title-detail md:w-11/12 md:mx-0 mx-5  xl:text-3xl 2xl:text-4xl'> {props.title}  </h3> 
 
       {error ? (
         <>Oh no, there was an error</>
@@ -36,7 +36,7 @@ const ContainerList = (props) => {
       arrayData.map((item) => 
         (
           <div key={item.idMeal}> 
-         <SwiperSlide key={item.idMeal} className='item-categories justify-center mx-2 flex w-100 h-7 flex-col'> 
+         <SwiperSlide key={item.idMeal} className='item-categories justify-center ml-5 flex w-100 h-7 flex-col'> 
           <ComponentItem item={item}/>
        </SwiperSlide>
         </div>
