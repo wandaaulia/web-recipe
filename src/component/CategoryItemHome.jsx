@@ -52,7 +52,7 @@ const CategoryItemHome = () => {
         (
          <SwiperSlide key={item.id} className='cursor-pointer pb-1 pl-1 pr-4  drop-shadow-sm'> 
          <div className='flex py-2 px-0 justify-center flex-col border border-solid border-gray-50  items-center rounded-md w-fit shadow shadow-gray-200' onClick={() => searchCategory(item.name, index)} color={toggleActiveStyles(index)}> 
-            <div className='flex w-2/5 py-1'>  <img src={item.img} alt="img" className='w-full'/> </div>
+            <div className='object-cover flex w-2/5 py-1'>  <img src={item.img} alt="img" className='w-full'/> </div>
             <p className='text-sm'>{item.name} </p>
         </div>
        </SwiperSlide>
@@ -67,7 +67,7 @@ const CategoryItemHome = () => {
       itemCategory.map((item, index) => 
         (
      <div key={item.id} className='cursor-pointer border border-solid border-gray-50 hover:border-red-100 pb-1 ml-0 md:mr-6 xl:p-2  drop-shadow-sm flex py-1  justify-center flex-col items-center rounded-md w-fit shadow shadow-gray-200' onClick={() => searchCategory(item.name, index)} color={toggleActiveStyles(index)}> 
-            <div className='flex w-2/5 py-2'>  <img src={item.img} alt="img" className='w-full'/> </div>
+            <div className=' flex w-2/5 py-2'>  <img src={item.img} alt="img" className='object-cover h-100 w-full'/> </div>
             <p className='text-sm xl:text-base'> {item.name} </p>
         </div>
  
