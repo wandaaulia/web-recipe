@@ -52,7 +52,7 @@ const CategoryItemHome = () => {
         (
          <SwiperSlide key={item.id} className='cursor-pointer pb-1 pl-1 pr-4  drop-shadow-sm'> 
          <div className='flex py-2 px-0 justify-center flex-col border border-solid border-gray-50  items-center rounded-md w-fit shadow shadow-gray-200' onClick={() => searchCategory(item.name, index)} color={toggleActiveStyles(index)}> 
-            <div className='object-cover flex w-2/5 py-1'>  <img src={item.img} alt="img" className='w-full'/> </div>
+            <div className='flex w-2/5 py-1'>  <img src={item.img} alt="img" className='object-cover h-100 w-full'/> </div>
             <p className='text-sm'>{item.name} </p>
         </div>
        </SwiperSlide>
