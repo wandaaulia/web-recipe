@@ -11,7 +11,9 @@ const Category = () => {
 
    const dispatch = useDispatch();
 
-  const listCategory = useSelector((state) => state.recipe.itemList); 
+  // const listCategory = useSelector((state) => state.recipe.itemList); 
+
+  const listCategory =  ['chicken', 'beef', 'dessert', 'pasta', 'Side', 'Vegetarian'];
 
   const activeObjectCat = useSelector((state) => state.recipe.activeObject); 
 

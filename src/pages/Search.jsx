@@ -20,9 +20,8 @@ const Search = () => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const name = data.get('name');
-
     await dispatch(unSetActiveCat());
-    await  navigate(`/search/${name}`);
+    await navigate(`/search/${name}`);
 
   };
 

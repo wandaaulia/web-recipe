@@ -22,7 +22,9 @@ const ComponentItem = (props) => {
           data.meals.forEach((item) => {
        country = item.strArea;
            category = item.strCategory;
-          })
+          });
+          
+          
         }
 
         if(error) {

@@ -15,7 +15,7 @@ const SearchList = (props) => {
            errorMessage = true;
            
         } else {
-         arrayData = data.meals.slice(0, 9);
+         arrayData = data.meals.slice(6, 12);
            errorMessage = false;
         }
     }
@@ -24,7 +24,7 @@ const SearchList = (props) => {
   return (
     <>
        {error ? (
-        <>Oh no, there was an error</>
+        <div className='mx-8 mt-8'>Oh no, there was an error</div>
       ) : isLoading ? (
         
         <div className='mt-8'>Loading...</div>

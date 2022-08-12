@@ -9,15 +9,6 @@ import iconVegetarian from '../assets/img/vegetarian-c.png';
 const initialState = {
   value: 0,
 activeObject: null,
-itemList:  ['chicken', 'beef', 'dessert', 'pasta', 'seafood', 'Vegetarian'],
-itemCategory:  [
-    { id: 1, img: iconChicken, name: 'Chicken'},
-    { id: 2, img: iconBeef, name: 'Beef'},
-       { id: 3, img: iconDessert, name: 'Dessert'},
-        { id: 4, img: iconPasta, name: 'Pasta'},
-         { id: 5, img: iconSeafood, name: 'Seafood'},
-          { id: 6, img: iconVegetarian, name: 'Vegetarian'}
-],
 unfav: null,
 itemFav : [],
 modalLogin : false,
@@ -65,7 +56,7 @@ export const recipeSlice = createSlice({
     },
      unSetTutorial : (state) => {
       state.tutorial = null;
-    },
+    }, 
   },
 })
 

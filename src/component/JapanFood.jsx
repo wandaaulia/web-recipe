@@ -1,11 +1,11 @@
 import React from 'react'
-import { useSearchRecipeByAreaQuery} from '../services/Apis';
+import {useSearchRecipeByNameQuery} from '../services/Apis';
 import ComponentItem from './ComponentItem';
 
 
 const JapanFood = () => {
 
-     const { data, error, isLoading } = useSearchRecipeByAreaQuery("Japanese");
+     const { data, error, isLoading } = useSearchRecipeByNameQuery("chocolate");
     let arrayData;
     let errorMessage;
 
@@ -15,7 +15,7 @@ const JapanFood = () => {
            errorMessage = true;
            
         } else {
-         arrayData = data.meals.slice(0, 9);
+         arrayData = data.meals.slice(0, 6);
            errorMessage = false;
         }
     }

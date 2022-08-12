@@ -94,6 +94,7 @@ const DetailItem = () => {
     }
   }
 
+
   const styleDesc = (index) => {
     if (listDesc[index] === activeDesc) {
       return "md:mr-10 mr-8 border-b-2 border-solid border-red-400 text-xl font-semibold black-title-detail md:w-11/12 md:mx-0 mx-3 xl:text-3xl 2xl:text-4xl";

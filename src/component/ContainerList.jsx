@@ -14,7 +14,7 @@ const ContainerList = (props) => {
     let arrayData;
 
     if(data) {
-        arrayData = data.meals.slice(1, 9); 
+        arrayData = data.meals.slice(4, 12); 
     }
 
 

@@ -6,14 +6,27 @@ import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import { setActiveCat, unSetTutorial } from '../features/recipeSlice';
+import iconChicken from '../assets/img/chicken-c.png';
+import iconBeef from '../assets/img/beef-c.png';
+import iconDessert from '../assets/img/dessert-c.png';
+import iconPasta from '../assets/img/pasta-c.png';
+import iconSideFood from '../assets/img/side-food.png';
+import iconVegetarian from '../assets/img/vegetarian-c.png';
 
 const CategoryItemHome = () => {
 
    const dispatch = useDispatch();
 
-  const itemCategory = useSelector((state) => state.recipe.itemCategory); 
+  // const itemCategory = useSelector((state) => state.recipe.itemCategory); 
   
-
+ const itemCategory = [
+    { id: 1, img: iconChicken, name: 'Chicken'},
+    { id: 2, img: iconBeef, name: 'Beef'},
+       { id: 3, img: iconDessert, name: 'Dessert'},
+        { id: 4, img: iconPasta, name: 'Pasta'},
+         { id: 5, img: iconSideFood, name: 'Side'},
+          { id: 6, img: iconVegetarian, name: 'Vegetarian'}
+]
   
   const activeObjectCat = useSelector((state) => state.recipe.activeObject); 
 
