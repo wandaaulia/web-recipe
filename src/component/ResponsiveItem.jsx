@@ -6,7 +6,7 @@ import { GiBowlOfRice } from "react-icons/gi";
 import { BiWorld } from "react-icons/bi";
 import { unSetTutorial } from '../features/recipeSlice';
 import { useDispatch } from "react-redux";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ResponsiveItem = (props) => {
 
@@ -41,7 +41,9 @@ const ResponsiveItem = (props) => {
   return (
     <>
   <div className='w-100 xl:w-full  md:flex h-40 xl:h-64 justify-center mx-auto'> 
-   <LazyLoadImage alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl object-cover' onClick={() => DetailFood(idMeal)}/>
+   {/* <LazyLoadImage alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl object-cover' onClick={() => DetailFood(idMeal)}/> */}
+              <img alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl object-cover' onClick={() => DetailFood(idMeal)}/>
+
             </div>
             <div className='p-4'> 
           <h4 className='text-sm leading-snug font-semibold h-16 lg:text-lg  2xl:text-2xl lg:leading-snug'>{strMeal}</h4>
