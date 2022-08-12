@@ -17,8 +17,13 @@ const { data, error, isLoading } = useGetCategoryFoodQuery(name);
            errorMessage = true;
            
         } else {
-         arrayData = data.meals.slice(7, 12);
+            if(data.meals.length <= 6) {
+            arrayData = data.meals.slice(0, 6);
+                  errorMessage = false;
+          } else {
+                arrayData = data.meals.slice(6, 12);
            errorMessage = false;
+          }
         }
 
     }
