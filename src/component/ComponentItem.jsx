@@ -7,6 +7,7 @@ import { BiWorld } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { unSetTutorial } from '../features/recipeSlice';
 // import { LazyLoadImage } from "react-lazy-load-image-component";
+import Swal from "sweetalert2";
 
 const ComponentItem = (props) => {
 
@@ -35,7 +36,20 @@ const ComponentItem = (props) => {
 
     const DetailFood = async (id) => {
         await dispatch(unSetTutorial());
+      
+      if(!category) {
+        Swal.fire({
+            title: "Sorry, This recipe isn't available anymores",
+            confirmButtonText: "OK",
+             confirmButtonColor: 'rgb(248 113 113)',
+            backdrop: false,
+            color: '#ffff',
+            background: 'rgba(0, 0, 0, .7)',
+             timer: 1500
+          });
+      } else {
        await navigate(`/detailfood/${id}`);
+      }
     }
 
     
