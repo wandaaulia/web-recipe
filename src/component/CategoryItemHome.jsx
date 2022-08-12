@@ -36,13 +36,9 @@ const CategoryItemHome = () => {
 
     const searchCategory = async (name, index) => {
     await dispatch(unSetTutorial());
-        await dispatch(setActiveCat(index));
+        await dispatch(setActiveCat(name));
         await navigate(`/search/category/${name}`);
-        
     }
-
-
-
 
   const toggleActiveStyles = (index) => {
       if(itemCategory[index] === activeObjectCat) {

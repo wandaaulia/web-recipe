@@ -18,7 +18,7 @@ export const recipeSlice = createSlice({
       state.isMenu = true
     },
     setActiveCat : (state, action) => {
-      state.activeObject = state.itemList[action.payload]
+      state.activeObject = action.payload;
     },
     unSetActiveCat : (state) => {
       state.activeObject = null;

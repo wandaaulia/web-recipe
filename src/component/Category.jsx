@@ -13,19 +13,16 @@ const Category = () => {
 
   // const listCategory = useSelector((state) => state.recipe.itemList); 
 
-  const listCategory =  ['chicken', 'beef', 'dessert', 'pasta', 'Side', 'Vegetarian'];
+  const listCategory =  ['Chicken', 'Beef', 'Dessert', 'Pasta', 'Side', 'Vegetarian'];
 
   const activeObjectCat = useSelector((state) => state.recipe.activeObject); 
-
-
 
   const navigate = useNavigate();
 
     const searchCategory = async (name, index) => {
     await dispatch(unSetTutorial());
-        await dispatch(setActiveCat(index));
+        await dispatch(setActiveCat(name));
         await navigate(`/search/category/${name}`);
-        
     }
 
 
