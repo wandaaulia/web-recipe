@@ -15,6 +15,7 @@ import Favorite from "./pages/Favorite";
 import DetailItem from "./pages/DetailItem";
 
 const Routers = () => {
+  // eslint-disable-next-line no-unused-vars
   const [user, loading] = useAuthState(auth);
 
   if (loading) {
