@@ -1,10 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import iconChicken from '../assets/img/chicken-c.png';
-import iconBeef from '../assets/img/beef-c.png';
-import iconDessert from '../assets/img/dessert-c.png';
-import iconPasta from '../assets/img/pasta-c.png';
-import iconSeafood from '../assets/img/seafood-c.png';
-import iconVegetarian from '../assets/img/vegetarian-c.png';
 
 const initialState = {
   value: 0,
