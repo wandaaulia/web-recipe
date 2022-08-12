@@ -7,6 +7,7 @@ import Footer from '../component/Footer';
 import { GiBowlOfRice } from "react-icons/gi";
 import { BiWorld } from "react-icons/bi";
 import ButtonFavDetail from '../component/ButtonFavDetail';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 const DetailFood = () => {
@@ -42,7 +43,7 @@ const DetailFood = () => {
   <div key={item.idMeal}>
             <div> 
             <div className=" w-100 flex h-40 md:h-52 md:w-2/4  lg:h-64 justify-center mx-auto"> 
-              <img src={item.strMealThumb} alt="img" className="w-full h-100 object-cover"/>
+     <LazyLoadImage alt="img" src={item.strMealThumb} className="w-full h-100 object-cover"/>
             </div> 
             
               <div className='w-11/12 mx-auto md:w-3/4 h-100 lg:w-3/5 xl:w-3/4'>

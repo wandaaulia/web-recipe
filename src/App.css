@@ -123,17 +123,6 @@ input[type="text"], input[type="password"], textarea, select {
     background-color: rgba(0, 0, 0, .7);
 }
 
-/* .modal-content {
-    width: 50%;
-  height: 500px;
-  border-radius: 12px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-} */
-
 .bg-modal {
   position: fixed;
   top: 0;
@@ -172,6 +161,7 @@ font-size: 0.8rem !important;
 .background-header-recipe {
     padding: 10% 0% 18% 0%;
 }
+
 
 }
 
@@ -217,3 +207,20 @@ font-size: 0.8rem !important;
 .black-title-detail {
   color : rgb(35, 35, 35);
 }
+
+.tutorial-youtube {
+   overflow: hidden;
+  padding-bottom: 59.25%;
+  position: relative;
+  height: 0;
+}
+
+
+.tutorial-youtube iframe {
+   left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+

@@ -3,6 +3,7 @@ import imgBg from '../assets/img/ayam-goreng-surundeng.jpg';
 import { auth } from '../config/firebase'
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Register = () => {
 
@@ -33,7 +34,7 @@ const Register = () => {
   return (
     <div className='xl:pb-10'>
     <div className='flex justify-center md:mt-14'>
-     <img src={imgBg} alt="img" className="w-full md:w-60 md:rounded-3xl"/>
+     <LazyLoadImage alt="img" src={imgBg}  className="w-full md:w-60 md:rounded-3xl"/>
     </div>
     <div className='md:w-3/4 mx-auto mt-2 md:mt-14 lg:w-3/5 xl:w-2/5'>  
     <div className='flex flex-col pt-4 ml-4'> 

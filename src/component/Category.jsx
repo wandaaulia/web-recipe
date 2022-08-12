@@ -5,7 +5,7 @@ import FilterCategory from './FilterCategory'
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
-import { setActiveCat } from '../features/recipeSlice';
+import { setActiveCat, unSetTutorial } from '../features/recipeSlice';
 
 const Category = () => {
 
@@ -20,7 +20,7 @@ const Category = () => {
   const navigate = useNavigate();
 
     const searchCategory = async (name, index) => {
-
+    await dispatch(unSetTutorial());
         await dispatch(setActiveCat(index));
         await navigate(`/search/category/${name}`);
         

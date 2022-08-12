@@ -20,7 +20,9 @@ itemCategory:  [
 ],
 unfav: null,
 itemFav : [],
-modalLogin : false
+modalLogin : false,
+tutorial :{
+},
 }
 
 export const recipeSlice = createSlice({
@@ -56,10 +58,17 @@ export const recipeSlice = createSlice({
     unSetModalLogin : (state) => {
       state.modalLogin = false;
     },
-    
+
+    setTutorial : (state, action) => {
+      state.tutorial = action.payload;
+     state.tutorialMessage = null;
+    },
+     unSetTutorial : (state) => {
+      state.tutorial = null;
+    },
   },
 })
 
-export const { setActiveCat, unSetActiveCat, setFav, unSetFav, setModalLogin, unSetModalLogin  } = recipeSlice.actions
+export const { setTutorial, unSetTutorial, setActiveCat, unSetActiveCat, setFav, unSetFav, setModalLogin, unSetModalLogin  } = recipeSlice.actions
 
 export default recipeSlice.reducer

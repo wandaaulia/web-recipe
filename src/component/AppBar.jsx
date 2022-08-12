@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from 'firebase/auth';
 import { auth } from '../config/firebase';
 import {  useDispatch } from 'react-redux'
-import { unSetActiveCat } from '../features/recipeSlice';
+import { unSetActiveCat, unSetTutorial } from '../features/recipeSlice';
 import Swal from "sweetalert2";
 
 const AppBar = () => {
@@ -16,6 +16,7 @@ const AppBar = () => {
    const dispatch = useDispatch();
 
    const navigateTo = async (link) => {
+        await dispatch(unSetTutorial());
       await dispatch(unSetActiveCat());
       await navigate(link);
     }
