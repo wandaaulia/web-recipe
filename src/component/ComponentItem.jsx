@@ -39,7 +39,7 @@ const ComponentItem = (props) => {
       
       if(!category) {
         Swal.fire({
-            title: "Sorry, This recipe isn't available anymores",
+            title: "Sorry, This recipe isn't available anymore",
             confirmButtonText: "OK",
              confirmButtonColor: 'rgb(248 113 113)',
             backdrop: false,

@@ -115,7 +115,14 @@ const DetailItem = () => {
           dataArray.map((item) => {
             resultDesc = item.strInstructions.split("\r\n");
             desc = resultDesc.filter((item) => item);
+               let category;
+            if(item.strCategory === 'Vegan') {
+                category = "Dessert"
+            } else {
+ category = item.strCategory;
+            }
 
+          
 
              if(desc.indexOf('1') === 1 ) {
                   for (let i = 1; i < desc.length; i++) {
@@ -305,8 +312,8 @@ const DetailItem = () => {
                   </div>
                 </div>
                 <ContainerList
-                  title={item.strCategory}
-                  query={item.strCategory}
+                  title={category}
+                  query={category}
                 />
               </div>
             );

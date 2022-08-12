@@ -8,13 +8,12 @@ import ComponentItem from './ComponentItem';
 import ResponsiveItem from './ResponsiveItem';
 
 const ContainerList = (props) => {
-
      const { data, error, isLoading } = useGetCategoryFoodQuery(props.query);
 
     let arrayData;
 
     if(data) {
-        arrayData = data.meals.slice(4, 12); 
+        arrayData = data.meals.slice(5, 12); 
     }
 
 
