@@ -22,7 +22,6 @@ const SearchName = () => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const name = data.get('name');
-    console.log(name);
     setSearch('')
   
     

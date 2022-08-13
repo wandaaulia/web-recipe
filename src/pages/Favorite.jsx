@@ -27,8 +27,6 @@ const [user] = useAuthState(auth);
   findUser = fav.filter((item) => item.userEmail === userEmail);
     }
 
-    console.log(userEmail);
-    console.log(findUser);
     
    console.log(fav);
   return (
