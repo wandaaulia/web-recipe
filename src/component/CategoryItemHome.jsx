@@ -16,8 +16,6 @@ import iconVegetarian from '../assets/img/vegetarian-c.png';
 const CategoryItemHome = () => {
 
    const dispatch = useDispatch();
-
-  // const itemCategory = useSelector((state) => state.recipe.itemCategory); 
   
  const itemCategory = [
     { id: 1, img: iconChicken, name: 'Chicken'},

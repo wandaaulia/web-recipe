@@ -6,7 +6,7 @@ import ContainerList from "../component/ContainerList";
 import Footer from "../component/Footer";
 import ButtonBar from "../component/ButtonBar";
 import { useSelector } from "react-redux";
-// import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 const getIngredient = (meal) => {
@@ -182,8 +182,8 @@ const DetailItem = () => {
                     ) : (
 
                   <div className=" w-11/12 mx-auto md:w-6/12 lg:w-96 lg:h-80  xl:w-2/6 xl:pr-4 xl:h-fit h-72 pt-4 lg:pt-10  md:order-last md:mx-0">
- {/* <LazyLoadImage alt="img"  src={item.strMealThumb}  className="w-full h-full rounded-lg  object-cover" /> */}
-                           <img alt="img" src={item.strMealThumb} className="w-full h-full rounded-lg  object-cover"/>
+ <LazyLoadImage alt="img"  src={item.strMealThumb}  className="w-full h-full rounded-lg  object-cover" />
+                           {/* <img alt="img" src={item.strMealThumb} className="w-full h-full rounded-lg  object-cover"/> */}
 
                   </div>)
                    }

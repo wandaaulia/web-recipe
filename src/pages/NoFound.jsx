@@ -9,7 +9,7 @@ const NoFound = () => {
           <h2 className='font-bold text-lg mb-4'> Oppss - 404 </h2>
       <h2 className='font-bold flex'>  You have reach the edge of universe </h2>
       <div className=' h-32 w-32 mt-8  xl:w-56 xl:mb-10'>
-       <LazyLoadImage  alt="gif" src={img}/>
+       <LazyLoadImage  alt="img" src={img}/>
       </div> 
       <Link to="/" className=' text-center mt-5 lg:mt-0 xl:mt-6 bg-red-400 text-white rounded-lg py-2 px-2'> Back to Home </Link>
   

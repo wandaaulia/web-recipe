@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSearchRecipeByNameQuery } from '../services/Apis';
 import ComponentItem from './ComponentItem';
-
+import LoadingApi from './LoadingApi';
 
 const SearchList = (props) => {
 
@@ -32,7 +32,9 @@ const SearchList = (props) => {
         <div className='mx-8 mt-8'>Oh no, there was an error</div>
       ) : isLoading ? (
         
-        <div className='mt-8'>Loading...</div>
+        <div className='mt-8'>
+          <LoadingApi />
+        </div>
       ) : data ? 
       
       <div className='pl-3 flex w-full flex-row flex-wrap pt-4'> 

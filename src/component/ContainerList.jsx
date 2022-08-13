@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import ComponentItem from './ComponentItem';
 import ResponsiveItem from './ResponsiveItem';
+import LoadingApi from './LoadingApi';
 
 const ContainerList = (props) => {
      const { data, error, isLoading } = useGetCategoryFoodQuery(props.query);
@@ -24,7 +25,9 @@ const ContainerList = (props) => {
       {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
-        <div className='mt-8 mb-8'>Loading...</div>
+        <div className='mt-8 mb-8'>
+    <LoadingApi />
+        </div>
       ) : data ? 
       <>  
       <div className='md:hidden'>  

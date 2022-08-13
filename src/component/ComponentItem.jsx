@@ -6,7 +6,7 @@ import { GiBowlOfRice } from "react-icons/gi";
 import { BiWorld } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { unSetTutorial } from '../features/recipeSlice';
-// import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Swal from "sweetalert2";
 
 const ComponentItem = (props) => {
@@ -57,8 +57,8 @@ const ComponentItem = (props) => {
   return (
   <> 
    <div className='w-11/12 flex h-40 justify-center ml-0'> 
-         {/* <LazyLoadImage alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl  object-cover' onClick={() => DetailFood(idMeal)} /> */}
-              <img alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl  object-cover' onClick={() => DetailFood(idMeal)} />
+         <LazyLoadImage alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl  object-cover' onClick={() => DetailFood(idMeal)} />
+              {/* <img alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl  object-cover' onClick={() => DetailFood(idMeal)} /> */}
             </div>
             <div className='pt-4 pb-2 pr-4 md:py-4'> 
           <h2 className='text-base leading-snug font-semibold h-14  text-black  md:h-12 flex'>{strMeal.substr(0, 30)}</h2>

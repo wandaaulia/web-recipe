@@ -1,7 +1,7 @@
 import React from 'react'
 import {useSearchRecipeByNameQuery} from '../services/Apis';
 import ComponentItem from './ComponentItem';
-
+import LoadingApi from './LoadingApi';
 
 const JapanFood = () => {
 
@@ -26,7 +26,9 @@ const JapanFood = () => {
        {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
-        <div className='mt-8'>Loading...</div>
+        <div className='mt-8'>
+              <LoadingApi />
+        </div>
       ) : data ? 
       
       <div className='flex w-full flex-row flex-wrap pt-0'> 
