@@ -1,1 +1,3 @@
-cache-control: max-age=604800, must-revalidate, public
+/*
+  cache-control: max-age=603800
+  cache-control: must-revalidate
