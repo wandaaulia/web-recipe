@@ -74,9 +74,9 @@ registerRoute(
  */
 registerRoute(
   ({ request }) =>
-    request.destination === "image" || request.destination === "video",
+    request.destination === "img" || request.destination === "video",
   new CacheFirst({
-    cacheName: "images",
+    cacheName: "img",
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],

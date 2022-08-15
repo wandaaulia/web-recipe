@@ -1,18 +1,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React from "react";
+import React, { Suspense, lazy } from 'react';
 import { auth } from "./config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+// import Login from "./pages/Login";
+// import Register from "./pages/Register";
 import ProtectedRoute from "./component/ProtectedRoute";
 import NoFound from "./pages/NoFound";
 import Loading from "./component/Loading";
-import Home from "./pages/Home";
-import Search from "./pages/Search";
-import SearchName from "./pages/SearchName";
-import CategoryPage from "./pages/CategoryPage";
-import Favorite from "./pages/Favorite";
-import DetailItem from "./pages/DetailItem";
+// import Home from "./pages/Home";
+// import Search from "./pages/Search";
+// import SearchName from "./pages/SearchName";
+// import CategoryPage from "./pages/CategoryPage";
+// import Favorite from "./pages/Favorite";
+// import DetailItem from "./pages/DetailItem";
+const Home = lazy(() => import("./pages/Home"));
+const Search = lazy(() => import("./pages/Search"));
+const CategoryPage = lazy(() => import("./pages/CategoryPage"));
+const Favorite = lazy(() => import("./pages/Favorite"));
+const SearchName = lazy(() => import("./pages/SearchName"));
+const DetailItem = lazy(() => import("./pages/DetailItem"));
+const Login = lazy(() => import("./pages/Login"));
+const Register = lazy(() => import("./pages/Register"));
 
 const Routers = () => {
   // eslint-disable-next-line no-unused-vars
@@ -24,6 +32,7 @@ const Routers = () => {
     return (
       <>
         <BrowserRouter>
+            <Suspense fallback={<Loading />}>
           <Routes>
             <Route
               path="/"
@@ -91,6 +100,7 @@ const Routers = () => {
             />
             <Route path="*" element={<NoFound />} />
           </Routes>
+           </Suspense>
         </BrowserRouter>
       </>
     );
