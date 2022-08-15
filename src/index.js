@@ -5,7 +5,8 @@ import App from './App';
 import { Provider } from 'react-redux'
 import {persistor, store } from './app/store';
 import { PersistGate } from "redux-persist/integration/react";
-
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,3 +18,7 @@ root.render(
     </Provider>
   // </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();
+
+reportWebVitals();
