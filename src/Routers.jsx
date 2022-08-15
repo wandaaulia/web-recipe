@@ -26,9 +26,7 @@ const Routers = () => {
   // eslint-disable-next-line no-unused-vars
   const [user, loading] = useAuthState(auth);
 
-  if (loading) {
-    return <Loading />;
-  } else {
+
     return (
       <>
         <BrowserRouter>
@@ -104,7 +102,6 @@ const Routers = () => {
         </BrowserRouter>
       </>
     );
-  }
-};
+  };
 
 export default Routers;
