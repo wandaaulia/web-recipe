@@ -227,12 +227,16 @@ font-size: 0.8rem !important;
 
 
 .overlay {
-  background-color: rgba(0, 0, 0, .4);
+  background-image: url("./assets/img/banner-img-header.png");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
 }
 
 
 .height-banner {
-  height: 280px;
+  height: 260px;
 }
 
 
@@ -242,18 +246,33 @@ font-size: 0.8rem !important;
   height: 320px;
 }
 
+.overlay {
+  background-color: rgba(0, 0, 0, .4);
+    background-image: none;
+}
+
+
 }
 
 @media screen and (min-width:1024px) {
 .height-banner {
   height: 384px;
 }
+.overlay {
+  background-color: rgba(0, 0, 0, .4);
+    background-image: none;
+}
+
 }
 
 
 @media screen and (min-width:1280px) {
 .height-banner {
   height: 450px;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, .4);
+    background-image: none;
 }
 
 
@@ -263,4 +282,9 @@ font-size: 0.8rem !important;
 .height-banner {
   height: 480px;
 }
+.overlay {
+  background-color: rgba(0, 0, 0, .4);
+    background-image: none;
+}
+
 }

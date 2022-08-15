@@ -3,6 +3,8 @@ import { MdSearch } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import {  useDispatch } from 'react-redux'
 import { unSetActiveCat } from '../features/recipeSlice';
+import bannerimg from '../assets/img/banner-img-header.png';
+import videoBanner from '../assets/video/cook_banner.mp4';
 
 const Header = () => {
     const [search, setSearch] = useState('');
@@ -28,8 +30,14 @@ const Header = () => {
 
   return (
     <> 
-    <div className='background-header-recipe flex flex-col  w-full mx-auto pt-8 lg:pt-4 items-center justify-center'
+    {/* <div className='background-header-recipe flex flex-col  w-full mx-auto pt-8 lg:pt-4 items-center justify-center'
     > 
+     <div className="z-20 w-full h-full backdrop-brightness-50 bg-cover">
+            <video poster={bannerimg} width="400" autoPlay muted loop className='z-10 w-full h-full object-cover object-center backdrop-brightness-50'>
+                <source src={videoBanner} type="video/mp4"/>
+                Your Browser does not support HTML video.
+            </video>
+    </div>
     <div> 
       <h1 className=' text-center font-bold color-title-header text-3xl pb-3 md:text-4xl md:pb-2 lg:pb-4 lg:text-5xl'> WE RECIPE </h1>
           <p className='text-center px-8 text-color-header ' > Helping you cook a variety of dishes from all over the world  </p>
@@ -42,20 +50,20 @@ const Header = () => {
         </button>
       </form>
    </div>
-    </div>
+    </div> */}
 
-         {/* <div className='w-full height-banner relative '> 
-  <div className="z-20 w-full h-full backdrop-brightness-50 bg-cover">
+         <div className='w-full height-banner relative '> 
+  <div className="hidden md:flex  z-20 w-full h-full backdrop-brightness-50 bg-cover">
             <video poster={bannerimg} width="400" autoPlay muted loop className='z-10 w-full h-full object-cover object-center backdrop-brightness-50'>
-                <source src="https://firebasestorage.googleapis.com/v0/b/food-app-6de2d.appspot.com/o/slice_cooking.mp4?alt=media&token=f3ed095f-be89-437e-af4d-176c4d74fef9" type="video/mp4"/>
+                <source src={videoBanner} type="video/mp4"/>
                 Your Browser does not support HTML video.
             </video>
     </div>
      <div className='overlay z-30 absolute top-0 left-0 flex flex-col h-full w-full justify-center items-center'
     > 
     <div> 
-      <h1 className=' text-center font-bold text-white text-3xl md:text-4xl mb-4 md:pb-2 lg:pb-4 lg:text-5xl'> WE RECIPE </h1>
-          <p className='text-center font-medium px-8 text-white' > Helping you cook a variety of dishes from all over the world  </p>
+      <h1 className=' text-center font-bold text-black md:text-white text-3xl md:text-4xl mb-4 md:pb-2 lg:pb-4 lg:text-5xl'> WE RECIPE </h1>
+          <p className='text-center font-medium px-8 text-gray-500 md:text-white' > Helping you cook a variety of dishes from all over the world  </p>
    </div>
    <div className='hidden md:flex pt-8'>
       <form id="form" className='bg-white w-full md:py-2 lg:py-0 focus:border focus:border-solid focus:border-red-500 md:px-8 rounded' onSubmit={handleSubmit}> 
@@ -68,7 +76,7 @@ const Header = () => {
     </div>
  
     
-    </div> */}
+    </div>
     </>
   )
 }
