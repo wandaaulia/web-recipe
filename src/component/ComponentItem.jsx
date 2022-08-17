@@ -55,7 +55,7 @@ const ComponentItem = (props) => {
     
 
   return (
-  <> 
+  <div className='cursor-pointer' onClick={() => DetailFood(idMeal)} > 
    <div className='w-11/12 flex h-40 justify-center ml-0'> 
          <LazyLoadImage alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl  object-cover' onClick={() => DetailFood(idMeal)} />
               {/* <img alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl  object-cover' onClick={() => DetailFood(idMeal)} /> */}
@@ -82,7 +82,7 @@ const ComponentItem = (props) => {
 
 
         
-  </>
+  </div>
   )
 }
 

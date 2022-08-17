@@ -39,7 +39,7 @@ const ResponsiveItem = (props) => {
 
 
   return (
-    <>
+   <div className='cursor-pointer' onClick={() => DetailFood(idMeal)} > 
   <div className='w-100 xl:w-full  md:flex h-40 xl:h-64 justify-center mx-auto'> 
    <LazyLoadImage alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl object-cover' onClick={() => DetailFood(idMeal)}/>
               {/* <img alt="img" src={`${strMealThumb}`} className='cursor-pointer w-full h-100 rounded-3xl object-cover' onClick={() => DetailFood(idMeal)}/> */}
@@ -65,7 +65,7 @@ const ResponsiveItem = (props) => {
 
           </div> 
           </div> 
-           </>
+           </div>
   )
 }
 

@@ -8,6 +8,8 @@
   margin: auto;
 }
 
+
+
 .bg-biru {
   background-color: blue;
 }
@@ -243,7 +245,7 @@ font-size: 0.8rem !important;
 @media screen and (min-width:768px) and (max-width:1023px) {
 
 .height-banner {
-  height: 320px;
+  height: 340px;
 }
 
 .overlay {
@@ -256,7 +258,7 @@ font-size: 0.8rem !important;
 
 @media screen and (min-width:1024px) {
 .height-banner {
-  height: 384px;
+  height: 395px;
 }
 .overlay {
   background-color: rgba(0, 0, 0, .4);
